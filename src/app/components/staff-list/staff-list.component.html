@@ -1,0 +1,14 @@
+<aside class="menu-sidebar d-none d-lg-block">
+    <div class="logo">
+        <a href="#">
+            <img src="assets/images/logos.png" alt="XYZ Company" class="img-responsive" width ="70px;">
+        </a>
+    </div>
+    <div class="menu-sidebar-content js-scrollbar1">
+        <nav class="navbar-sidebar">
+            <ul class="list-unstyled navbar-list" *ngFor ="let d of staffs">
+                <li><a routerLink="/students/{{d.id}}" >{{d.name}}</a></li>
+            </ul>
+        </nav>
+    </div>
+</aside>

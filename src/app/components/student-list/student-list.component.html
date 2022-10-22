@@ -1,0 +1,45 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            <button class="aut-btn-submit btn-info" (click)="addStudents()">AddStudents</button>
+            <div class="row">
+              <table class='table'>
+                <thead>
+                    <tr class='table-dark'>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Department_Name</th>
+                        <th>Address</th>
+                        <th>Total_Fees</th>
+                        
+                    </tr>
+            
+                </thead>
+                <tr >
+                    <td>1</td>
+                    <td>Pratik</td>
+                    <td>IT</td>
+                    <td>Pune</td>
+                    <td>65000</td>
+                    
+                </tr>
+                <tr *ngFor="let tempstudent of students">
+                    <td>{{tempstudent.id}}</td>
+                    <td>{{tempstudent.name}}</td>
+                    <td>{{tempstudent.dept_name}}</td>
+                    <td>{{tempstudent.address}}</td>
+                    <td>{{tempstudent.total_fees}}</td>
+                    
+                    <td>
+                       
+                            <button type="button" class="btn btn-md btn-info" (click) = "updateStudent(tempstudent.id)">Update</button>
+                            &nbsp; &nbsp;
+                    <button type="button" class="btn btn-md btn-info" (click) = "deleteStudent(tempstudent.id)">Delete </button>        
+                    </td>
+                  </tr>
+            </table>
+            </div>
+        </div>
+    
+ </div>
+ </div>
